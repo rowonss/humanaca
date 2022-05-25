@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    ul,
+    li {
+        list-style-type: none;
+        float: left;
+
+    }
+
+    .button2 {
+        float: right;
+        margin-left: 10px;
+        padding: 5px;
+        background-color: rgb(75, 75, 75);
+        color: aliceblue;
+    }
+
+    .commentbg {
+
+        background-color: rgb(182, 182, 182);
+    }
+
+    .tabledone {
+        border-spacing: 0px;
+        width: 100%;
+    }
+
+    .tableinfo {
+        border-top: 5px solid gray;
+        border-bottom: 1px solid gray;
+        background-color: rgb(182, 182, 182);
+    }
+
+    .commnetbt {
+        float: right;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        background-color: rgb(75, 75, 75);
+        color: aliceblue;
+        font-size: 15px;
+    }
+
+    .commnettext {
+        width: 50%;
+        height: 90px;
+        float: right;
+        margin: 10px;
+    }
+</style>
+
+<body>
+    <h1 style="margin-left: 10px;">게시판</h1>
+    <form>
+        <table class="tabledone">
+            <tr>
+                <td class="tableinfo">게시글 1 입니다.</td>
+                <td class="tableinfo">
+                    <ul style="float: right; margin-right: 10px;">
+                        <li>김준석ㅣ</li>
+                        <li>조회 :&nbsp;</li>
+                        <li>15</li>
+                        <li>2022-05-16 (09:00)</li>
+                    </ul>
+                </td>
+            </tr>
+            <td style="padding: 30px;">
+                게시판 3가지 만들기 끝났습니다!<br />
+                게시판 3가지 만들기 끝났습니다!<br />
+                게시판 3가지 만들기 끝났습니다!<br />
+                게시판 3가지 만들기 끝났습니다!<br />
+                게시판 3가지 만들기 끝났습니다!<br />
+            </td>
+            <tr class="commentbg">
+                <td colspan="2" style="border-top: 1px solid gray; border-bottom: 1px solid rgb(182, 182, 182); ">
+                    <input class="commnetbt" type="button" value="덧글쓰기">
+                    <input class="commnettext" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding: 30px;">
+                    <input class="button2" type="button" value="글쓰기">
+                    <input class="button2" type="button" value="목록">
+                    <input class="button2" type="button" value="삭제">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

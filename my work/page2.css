@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+body{
+    background-color: rgb(101, 162, 177);
+}
+@font-face {
+    font-family: 'EarlyFontDiary';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Happiness-Sans-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.title{
+    font-family: 'Happiness-Sans-Bold';
+    width: 500px;
+    margin-bottom: 30px;
+    border-radius: 30ch;
+    height: 50px; 
+    border: 3px solid black;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(181, 255, 132, 0);
+}
+nav{
+    font-family: 'Happiness-Sans-Bold';
+    float: left;
+    width: 15%;
+    height: 100%;
+    margin-right: 30px;
+}
+.content{
+    font-family: 'Happiness-Sans-Bold';
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}

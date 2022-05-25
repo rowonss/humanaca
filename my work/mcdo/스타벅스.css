@@ -1,0 +1,419 @@
+@charset "utf-8";
+
+@media (max-width: 960px) {
+    .firstwrap {
+        display: none;
+    }
+    .sidewrap {
+        display: none;
+    }
+    .companyinfo{
+        display: none;
+    }
+    section {
+        padding-top: 69px;
+    }
+    .footerblank{
+        display: none;
+    }
+}
+
+@media (min-width: 960px) {
+    .mobile {
+        display: none;
+    }
+    section {
+        padding-top: 125px;
+    }
+    .footerslidemedia{
+        display: none
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /* position: fixed; */
+    width: 100%;
+    min-width: 1100px;
+    display: flex;
+    justify-content: center;
+    background-color: #f6f5ef;
+    z-index: 998;
+}
+
+section{
+    width: 100%;
+    height: auto;
+    /* padding-top: 125px; */
+}
+
+.sidewrap{
+    position: fixed;
+    float: right;
+    left: 54.5%;
+    width: 140px;
+    margin-top: 50px;
+    margin-left: 400px;
+    z-index: 1001;
+}
+.sidebar{
+    float: right;
+    top: 154px;
+    left: 54.5%;
+    width: 140px;
+    margin-left: 485px;
+    z-index: 1001;
+}
+
+footer {
+    font-family: 'Gothic A1', sans-serif;
+    background: #2C2A29;
+    width: 100%;
+    /* min-width: 1182px; */
+    /* display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: auto auto auto auto auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0 35px 0;
+}
+
+.footerslidemedia{
+    float: left;
+    width: 100%;
+    grid-area: 1/1/2/4;
+}
+
+.mobile{
+    background: #f6f5ef;
+    border-bottom: 1px solid #e5e5e5;
+    height: 69px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.mobile> h1> .logo{
+    background-size: 45px auto;
+    height: 45px;
+    width: 45px;
+}
+
+.mobile>nav>ul>li{
+    margin-left: 30px;
+    float: left;
+    list-style: none;
+}
+
+.mobile> h1{
+    height: 45px;
+    left: 10px;
+    position: absolute;
+    top: 13px;
+    width: 45px;
+}
+
+.firstwrap {
+    width: 1100px;
+    height: 123px;
+}
+
+ul,
+li:not(.toplist) {
+    list-style: none;
+    z-index: 999;
+}
+
+.toplist {
+    font-size: 13px;
+    float: left;
+    padding-left: 30px;
+}
+
+.topmenu {
+    font-size: 14px;
+    float: left;
+    margin-left: 30px;
+}
+
+.slidemenu {
+    float: right;
+    margin-top: 0px;
+    width: 800px;
+    /* position: relative; */
+    /* margin-bottom: 20px;   */
+    height: 62px;
+}
+
+.listoflist {
+    float: left;
+    margin-left: 30px;
+}
+
+.invimenu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+
+a:not(.listson a, .listsonhead a, .listbottomwhite a) {
+    text-decoration:none;
+    color: black
+}
+
+.slidemenu>div {
+    font-size: 14px;
+    float: left;
+    /* margin-left: 40px; */
+    height: 62px;
+}
+
+.mainlistfont {
+    padding-top: 8px;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mainlistfont:hover {
+    color: #669900;
+    background: #333;
+    text-decoration-line: underline;
+}
+
+.listwrap {
+    /* min-width: 1100px; */
+    width: 100%;
+    position: absolute;
+    bottom: 3px;
+}
+
+ol,
+li {
+    margin: 0;
+    list-style-type: none;
+}
+
+.listsonhead {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+.listson {
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: rgb(136, 136, 136);
+}
+
+.listoflist {
+    font-family: 'Gothic A1', sans-serif;
+    width: 200px;
+    margin: 0;
+    padding-top: 5px;
+    padding-right: 20px;
+}
+
+.listbottom {
+    font-family: 'Gothic A1', sans-serif;
+    width: 100%;
+    margin: 0;
+    padding-top: 5px;
+    padding-right: 20px;
+}
+
+.listbottomwhite {
+    font-size: 13px;
+    color: rgb(134, 134, 134);
+}
+
+.listbottomgreen {
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #76b100;
+}
+
+.listson a {
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: rgb(136, 136, 136);
+    text-decoration: none;
+}
+
+.listson a:hover {
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: rgb(136, 136, 136);
+    text-decoration: underline;
+}
+
+.listsonhead a {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.listsonhead a:hover {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.listbottomwhite a {
+    font-size: 13px;
+    color: rgb(134, 134, 134);
+    text-decoration: none;
+}
+
+.listbottomwhite a:hover {
+    font-size: 13px;
+    color: rgb(134, 134, 134);
+    text-decoration: underline;
+}
+
+.companyinfo {
+    grid-area: 1/2/2/3;
+    background: url(../스타벅스이미지/footer_logo.png) no-repeat right 10px;
+    width: 1182px;
+    height: auto;
+    margin-bottom: 80px;
+}
+
+.companyinfo>ul {
+    margin-right: 90px;
+    float: left;
+    font-size: 15px;
+    color: aliceblue;
+}
+
+.companyinfo>ul>li:not(.ftcinfolisthd) {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.ftcinfolisthd {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.award {
+    grid-area: 2/1/3/4;
+    width: 100%;
+    height: auto;
+    background: #282828;
+}
+
+.award>ul>li {
+    float: left;
+}
+
+.award {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.footerblank {
+    background: #282828;
+    height: 100%;
+    width: 100%;
+    grid-area: 2/1/3/4;
+}
+
+.footerlast {
+    grid-area: 3/2/4/3;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.footerlast>ul {
+    padding-top: 20px;
+}
+
+.footerlast>ul>li {
+    color: #c4c4c4;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    float: left;
+}
+
+.sitemap {
+    grid-area: 4/2/5/3;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sitemap>ul>li {
+    margin-top: 10px;
+    font-weight: 300;
+    color: #c4c4c4;
+    font-size: 12px;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    border: 2px solid white;
+    border-width: 2px;
+    border-radius: 3px;
+}
+
+.lastoflast {
+    grid-area: 5/2/6/3;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.footerslide1>li>a,
+.footerslide2>li>a,
+.footerslide3>li>a,
+.footerslide4>li>a,
+.footerslide5>li>a,
+.footerslide6>li>a {
+    color: #fff;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 15px;
+    background: #7e7168;
+}
+
+.footerslideinner1>li>a,
+.footerslideinner2>li>a,
+.footerslideinner3>li>a,
+.footerslideinner4>li>a,
+.footerslideinner5>li>a,
+.footerslideinner6>li>a {
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 15px;
+    background: #a09084;
+}
+.footermenu>ul {
+    margin: 0;
+}

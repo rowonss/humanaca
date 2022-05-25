@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+.container{
+    background-color: beige;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: 70px 30px 6px 15px 100px auto;
+}
+
+.main{
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.counter{
+    font-size: 18px;
+    grid-column-start: 1;
+    grid-column-end: 21;
+}
+.stats{
+    grid-column-start: 1;
+    grid-column-end: 21;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border-top: 2px solid black;
+}
+.select{
+    float: right;
+    font-size: 17px;
+    grid-column-start: 15;
+    grid-column-end: 21;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.info{
+    border-top: 2px solid black;
+    font-size: 3px;
+    grid-column-start: 1;
+    grid-column-end: 21;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.info1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.info2{
+    text-align: center;
+    grid-column-start: 8;
+    grid-column-end: 10;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.info3{
+    grid-column-start: 17;
+    grid-column-end: 21;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.num{
+    border-top: 1px solid gray;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+}
+
+.title{
+    border-top: 1px solid gray;
+    grid-column-start: 2;
+    grid-column-end: 15;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.name{
+    text-align: right;
+    border-top: 1px solid gray;
+    grid-column-start: 15;
+    grid-column-end: 18;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.day{
+    
+    border-top: 1px solid gray;
+    grid-column-start: 18;
+    grid-column-end: 20;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.count{
+    border-top: 1px solid gray;
+    grid-column-start: 20;
+    grid-column-end: 21;
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+}
+
+.bf{
+    grid-column-start: 8;
+    grid-column-end: 15;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+.button{
+    grid-column-start: 19;
+    grid-column-end: 21;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}

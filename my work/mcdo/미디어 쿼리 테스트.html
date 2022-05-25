@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        // 1---------------------------------------------------------
+        $(document).on('click', '.footermenut1down', function () {
+            $('.footerslide1').slideDown(500);
+            $('.footermenut1up').css("display", "block")
+            $('.footermenut1down').css("display", "none")
+        });
+        $(document).on('click', '.footermenut1up', function () {
+            if (!$(this).hasClass('')) {
+                $('.footerslide1').slideUp(500);
+                $('.footermenut1up').css("display", "none")
+                $('.footermenut1down').css("display", "block")
+            }
+        })
+        $(document).on('click', '.footerslideinner1down', function () {
+            $('.footerslideinner1').slideDown(500);
+            $('.footerslideinner1up').css("display", "block")
+            $('.footerslideinner1down').css("display", "none")
+        });
+        $(document).on('click', '.footerslideinner1up', function () {
+            if (!$(this).hasClass('')) {
+                $('.footerslideinner1').slideUp(500);
+                $('.footerslideinner1up').css("display", "none")
+                $('.footerslideinner1down').css("display", "block")
+            }
+        })
+        // 2-------------------------------------------------------------
+        $(document).on('click', '.footermenut2down', function () {
+            $('.footerslide2').slideDown(500);
+            $('.footermenut2up').css("display", "block")
+            $('.footermenut2down').css("display", "none")
+        });
+        $(document).on('click', '.footermenut2up', function () {
+            if (!$(this).hasClass('')) {
+                $('.footerslide2').slideUp(500);
+                $('.footermenut2up').css("display", "none")
+                $('.footermenut2down').css("display", "block")
+            }
+        })
+        $(document).on('click', '.footerslideinner2down', function () {
+            $('.footerslideinner2').slideDown(500);
+            $('.footerslideinner2up').css("display", "block")
+            $('.footerslideinner2down').css("display", "none")
+        });
+        $(document).on('click', '.footerslideinner2up', function () {
+            if (!$(this).hasClass('')) {
+                $('.footerslideinner2').slideUp(500);
+                $('.footerslideinner2up').css("display", "none")
+                $('.footerslideinner2down').css("display", "block")
+            }
+        })
+        // 3-------------------------------------------------------------------
+        $(document).on('click', '.footermenut3down', function () {
+            $('.footerslide3').slideDown(500);
+            $('.footermenut3up').css("display", "block")
+            $('.footermenut3down').css("display", "none")
+        });
+        $(document).on('click', '.footermenut3up', function () {
+            if (!$(this).hasClass('')) {
+                $('.footerslide3').slideUp(500);
+                $('.footermenut3up').css("display", "none")
+                $('.footermenut3down').css("display", "block")
+            }
+        })
+        // 4---------------------------------------------------------------------
+        $(document).on('click', '.footermenut4down', function () {
+            $('.footerslide4').slideDown(500);
+            $('.footermenut4up').css("display", "block")
+            $('.footermenut4down').css("display", "none")
+        });
+        $(document).on('click', '.footermenut4up', function () {
+            if (!$(this).hasClass('')) {
+                $('.footerslide4').slideUp(500);
+                $('.footermenut4up').css("display", "none")
+                $('.footermenut4down').css("display", "block")
+            }
+        })
+        // 5-----------------------------------------------------------------------
+        $(document).on('click', '.footermenut5down', function () {
+            $('.footerslide5').slideDown(500);
+            $('.footermenut5up').css("display", "block")
+            $('.footermenut5down').css("display", "none")
+        });
+        $(document).on('click', '.footermenut5up', function () {
+            if (!$(this).hasClass('')) {
+                $('.footerslide5').slideUp(500);
+                $('.footermenut5up').css("display", "none")
+                $('.footermenut5down').css("display", "block")
+            }
+        })
+        // 6--------------------------------------------------------------------------
+        $(document).on('click', '.footermenut6down', function () {
+            $('.footerslide6').slideDown(500);
+            $('.footermenut6up').css("display", "block")
+            $('.footermenut6down').css("display", "none")
+        });
+        $(document).on('click', '.footermenut6up', function () {
+            if (!$(this).hasClass('')) {
+                $('.footerslide6').slideUp(500);
+                $('.footermenut6up').css("display", "none")
+                $('.footermenut6down').css("display", "block")
+            }
+        })
+    </script>
+    <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        @media (max-width: 960px) {
+            .desktop {
+                display: none;
+            }
+        }
+
+        @media (min-width: 960px) {
+            .mobile {
+                display: none;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration-line: underline;
+        }
+
+
+        ul,
+        li {
+            list-style-type: none;
+            padding: 0%;
+        }
+
+        .footerslide1>li>a,
+        .footerslide2>li>a,
+        .footerslide3>li>a,
+        .footerslide4>li>a,
+        .footerslide5>li>a,
+        .footerslide6>li>a {
+            color: #fff;
+            font-size: 14px;
+            line-height: 50px;
+            padding-left: 15px;
+            background: #7e7168;
+        }
+
+        .footerslideinner1>li>a,
+        .footerslideinner2>li>a,
+        .footerslideinner3>li>a,
+        .footerslideinner4>li>a,
+        .footerslideinner5>li>a,
+        .footerslideinner6>li>a {
+            color: #fff;
+            display: block;
+            font-size: 14px;
+            line-height: 50px;
+            padding-left: 15px;
+            background: #a09084;
+        }
+        .footermenu>ul {
+            margin: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="desktop">저는 넓은 화면에서만 보입니다.</li>
+        <li>저는 항상 보입니다.</li>
+        <li class="mobile">저는 좁은 화면에서만 보입니다.</li>
+    </ul>
+    <div style="height: auto; width: 100%;">
+        <div class="footermenu" style="display: flex; flex-direction: column; width: 100%;">
+            <ul>
+                <li>
+                    <a class="footermenut1down" href="javascript:void(0);" style="color: #fff;
+                        display: block;
+                        font-size: 14px;
+                        line-height: 50px;
+                        padding-left: 15px;
+                        background: #554c46;">CUSTOMER SERVICE & IDEAS<img
+                            style="float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                            src="../스타벅스이미지/mobile_footer_arrow_down.png"></a></li>
+                <a class="footermenut1up" href="javascript:void(0);" style="color: #fff;
+                        display: none;
+                        font-size: 14px;
+                        line-height: 50px;
+                        padding-left: 15px;
+                        background: #554c46;">CUSTOMER SERVICE & IDEAS<img
+                        style="float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                        src="../스타벅스이미지/mobile_footer_arrow_up.png"></a></li>
+                <div class="footerslide1" style="display: none;">
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/faq.do"> 자주 하는 질문 </a></li>
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/customer/suggestionWrite.do"> 고객의
+                            소리 </a></li>
+                    <li><a style="display: block;" class="footerslideinner1down" href="javascript:void(0)">스타벅스 이용 팁<img
+                                style="float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                                src="../스타벅스이미지/mobile_footer_arrow_down2.png"> </a>
+                        <a style="display: none;" class="footerslideinner1up" href="javascript:void(0)"
+                            style="display: none;">스타벅스 이용 팁<img
+                                style=" float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                                src="../스타벅스이미지/mobile_footer_arrow_up2.png"> </a>
+                        <ul class="footerslideinner1" style="display: none;">
+                            <li><a href="https://www.starbucks.co.kr/util/web_tip.do">홈페이지 이용 팁</a></li>
+                            <li><a href="https://www.starbucks.co.kr/util/app_tip.do">애플리케이션 이용 팁</a></li>
+                            <li><a href="https://www.starbucks.co.kr/util/partnership_card.do">제휴카드 안내</a></li>
+                        </ul>
+                    </li>
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/online_survey.do"> 고객 경험 설문조사
+                        </a></li>
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/guest_eReceipt.do"> 비회원 전자영수증
+                            조회 </a></li>
+                </div>
+            </ul>
+            <ul>
+                <li>
+                    <a class="footermenut2down" href="javascript:void(0);" style="color: #fff;
+                        display: block;
+                        font-size: 14px;
+                        line-height: 50px;
+                        padding-left: 15px;
+                        background: #554c46;">COMPANY<img
+                            style="float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                            src="../스타벅스이미지/mobile_footer_arrow_down.png"></a></li>
+                <a class="footermenut2up" href="javascript:void(0);" style="color: #fff;
+                        display: none;
+                        font-size: 14px;
+                        line-height: 50px;
+                        padding-left: 15px;
+                        background: #554c46;">COMPANY<img
+                        style="float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                        src="../스타벅스이미지/mobile_footer_arrow_up.png"></a></li>
+                <div class="footerslide2" style="display: none;">
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/faq.do"> 한눈에 보기 </a></li>
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/customer/suggestionWrite.do"> 스타벅스
+                            사명 </a></li>
+                    <li><a style="display: block;" class="footerslideinner2down" href="javascript:void(0)">스타벅스 소개<img
+                                style="float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                                src="../스타벅스이미지/mobile_footer_arrow_down2.png"> </a>
+                        <a style="display: none;" class="footerslideinner2up" href="javascript:void(0)"
+                            style="display: none;">스타벅스 이용 팁<img
+                                style=" float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                                src="../스타벅스이미지/mobile_footer_arrow_up2.png"> </a>
+                        <ul class="footerslideinner2" style="display: none;">
+                            <li><a href="https://www.starbucks.co.kr/util/web_tip.do">스타벅스 코리아</a></li>
+                            <li><a href="https://www.starbucks.co.kr/util/app_tip.do">주요 연혁</a></li>
+                            <li><a href="https://www.starbucks.co.kr/util/partnership_card.do">스타벅스 이야기</a></li>
+                        </ul>
+                    </li>
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/online_survey.do"> 국내 뉴스룸
+                        </a></li>
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/guest_eReceipt.do"> 세계의 스타벅스
+                        </a></li>
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/online_survey.do"> 글로벌 뉴스룸
+                        </a></li>
+                </div>
+            </ul>
+            <ul>
+                <li>
+                    <a class="footermenut3down" href="javascript:void(0);" style="color: #fff;
+                        display: block;
+                        font-size: 14px;
+                        line-height: 50px;
+                        padding-left: 15px;
+                        background: #554c46;">CORPORATE SALES<img
+                            style="float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                            src="../스타벅스이미지/mobile_footer_arrow_down.png"></a></li>
+                <a class="footermenut3up" href="javascript:void(0);" style="color: #fff;
+                        display: none;
+                        font-size: 14px;
+                        line-height: 50px;
+                        padding-left: 15px;
+                        background: #554c46;">CORPORATE SALES<img
+                        style="float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                        src="../스타벅스이미지/mobile_footer_arrow_up.png"></a></li>
+                <div class="footerslide3" style="display: none;">
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/faq.do"> 단체 및 기업 구매 안내 </a>
+                    </li>
+                    </a></li>
+                </div>
+            </ul>
+            <ul>
+                <li>
+                    <a class="footermenut4down" href="javascript:void(0);" style="color: #fff;
+                        display: block;
+                        font-size: 14px;
+                        line-height: 50px;
+                        padding-left: 15px;
+                        background: #554c46;">PARTNERSHIP<img
+                            style="float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                            src="../스타벅스이미지/mobile_footer_arrow_down.png"></a></li>
+                <a class="footermenut4up" href="javascript:void(0);" style="color: #fff;
+                        display: none;
+                        font-size: 14px;
+                        line-height: 50px;
+                        padding-left: 15px;
+                        background: #554c46;">PARTNERSHIP<img
+                        style="float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                        src="../스타벅스이미지/mobile_footer_arrow_up.png"></a></li>
+                <div class="footerslide4" style="display: none;">
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/faq.do"> 신규 입점 제의 </a></li>
+                    </a></li>
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/faq.do"> 협력 고객사 등록 신청 </a>
+                    </li>
+                    </a></li>
+                </div>
+            </ul>
+            <ul>
+                <li>
+                    <a class="footermenut5down" href="javascript:void(0);" style="color: #fff;
+                        display: block;
+                        font-size: 14px;
+                        line-height: 50px;
+                        padding-left: 15px;
+                        background: #554c46;">ONLINE COMMUNITY<img
+                            style="float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                            src="../스타벅스이미지/mobile_footer_arrow_down.png"></a></li>
+                <a class="footermenut5up" href="javascript:void(0);" style="color: #fff;
+                        display: none;
+                        font-size: 14px;
+                        line-height: 50px;
+                        padding-left: 15px;
+                        background: #554c46;">ONLINE COMMUNITY<img
+                        style="float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                        src="../스타벅스이미지/mobile_footer_arrow_up.png"></a></li>
+                <div class="footerslide5" style="display: none;">
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/faq.do"> 페이스북 </a></li>
+                    </a></li>
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/faq.do"> 트위터 </a></li>
+                    </a></li>
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/faq.do"> 유튜브 </a></li>
+                    </a></li>
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/faq.do"> 인스타그램 </a></li>
+                    </a></li>
+                </div>
+            </ul>
+            <ul>
+                <li>
+                    <a class="footermenut6down" href="javascript:void(0);" style="color: #fff;
+                        display: block;
+                        font-size: 14px;
+                        line-height: 50px;
+                        padding-left: 15px;
+                        background: #554c46;">RECRUIT<img
+                            style="float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                            src="../스타벅스이미지/mobile_footer_arrow_down.png"></a></li>
+                <a class="footermenut6up" href="javascript:void(0);" style="color: #fff;
+                        display: none;
+                        font-size: 14px;
+                        line-height: 50px;
+                        padding-left: 15px;
+                        background: #554c46;">RECRUIT<img
+                        style="float: right; width: 20px; height: 11px; padding-top: 20px; padding-right: 15px;"
+                        src="../스타벅스이미지/mobile_footer_arrow_up.png"></a></li>
+                <div class="footerslide6" style="display: none;">
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/faq.do"> 채용 소개 </a></li>
+                    </a></li>
+                    <li><a style="display: block;" href="https://www.starbucks.co.kr/util/faq.do"> 채용 지원하기 </a></li>
+                    </a></li>
+
+                </div>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

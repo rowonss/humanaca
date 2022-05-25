@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="맥도날드 개인.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).on('mouseover', '.topMenu span', function () {
+            $('.dept01').slideDown(500);
+        });
+        $(document).on('mouseover', 'div', function () {
+            if (!$(this).hasClass('topMenu')) {
+                $('.dept01').slideUp(500);
+            }
+        });
+        $(document).on('mouseover', '.topMenu span', function () {
+            $('.dept02').slideDown(200);
+        });
+        $(document).on('mouseover', 'div', function () {
+            if (!$(this).hasClass('topMenu')) {
+                $('.dept02').slideUp(200);
+            }
+        });
+
+        let interval;
+        let activeIndex = 1;
+
+        $(document).ready(function () {
+            interval = setInterval(changeActiveIndex, 2500);
+            $('.list-button-item').on('click', function () {
+                // list button의 색상 변경
+                const index = $(this).index();
+                activeIndex = index;
+                changeActiveIndex();
+                clearInterval(interval);
+                // animation 재설정을 위해 animation을 잠시 제거한다.
+                $('.banner').css('animation', 'none');
+                // animation 재설정
+                $('.banner').animate({
+                    marginLeft: `${-100*index}%`
+                }, 1, function () {
+                    //1초의 시간 여유(해당 이미지로 이동하는 animation을 위한 시간)를 두고 다시 animation을 설정한다.
+                    setTimeout(function () {
+                        $('.banner').css('animation',
+                            `animation${index+1} 110s infinite`)
+
+                        interval = setInterval(changeActiveIndex, 2500);
+                    }, 1000)
+                })
+            })
+        })
+
+        function changeActiveIndex() {
+            if (activeIndex > 3) {
+                activeIndex %= 4;
+            }
+            changeActiveBtn();
+            activeIndex += 1;
+        }
+
+        function changeActiveBtn() {
+            $('.list-button-item').removeClass('active');
+            $(`.list-button span:eq(${activeIndex})`).addClass('active');
+        }
+    </script>
+</head>
+
+<body>
+    <header style="width: 100%; min-width: 1200px; padding-top: 15px; " >
+        <nav>
+            <a href="../index.html"><img src="logo.png"
+                    style="margin-left: 50px ; margin-top: 5px; margin-bottom: 30px; float: left;"></a>
+            <div class="topMenu">
+                <ul class="menu01">
+                    <li class="menuinfo"><span>Menu</span>
+                        <ul class="dept01">
+                            <li id="nop">버거</li>
+                            <li id="nop">맥런치</li>
+                            <li id="nop">맥모닝</li>
+                            <li id="nop">해피스낵</li>
+                            <li id="nop">사이드 & 디저트</li>
+                            <li id="nop">맥카페 & 음료</li>
+                            <li id="nop">해피밀</li>
+                        </ul>
+                    </li>
+                    <li class="menuinfo"><span>store</span>
+                        <ul class="dept02">
+                            <li id="nop">매장찾기</li>
+                            <li id="nop">맥딜리버리</li>
+                            <li id="nop">맥드라이브</li>
+                            <li id="nop">임차문의</li>
+                            <li id="nop" style="color: rgba(0, 0, 0, 0);">sub05</li>
+                            <li id="nop" style="color: rgba(0, 0, 0, 0);">sub05</li>
+                            <li id="nop" style="color: rgba(0, 0, 0, 0);">sub05</li>
+                        </ul>
+                    </li>
+                    <li class="menuinfo"><span>What's New</span>
+                        <ul class="dept01">
+                            <li id="nop">프로모션</li>
+                            <li id="nop">새로운 소식</li>
+                            <li id="nop">이달의 해피밀</li>
+                            <li id="nop" style="color: rgba(0, 0, 0, 0);">sub05</li>
+                            <li id="nop" style="color: rgba(0, 0, 0, 0);">sub05</li>
+                            <li id="nop" style="color: rgba(0, 0, 0, 0);">sub05</li>
+                            <li id="nop" style="color: rgba(0, 0, 0, 0);">sub05</li>
+                        </ul>
+                    </li>
+                    <li class="menuinfo"><span>Stoty</span>
+                        <ul class="dept01">
+                            <li id="nop">브랜드 소개</li>
+                            <li id="nop">사회적 책임과 지원</li>
+                            <li id="nop">맥도날드 품질 이야기</li>
+                            <li id="nop">맥도날드사람들</li>
+                            <li id="nop" style="color: rgba(0, 0, 0, 0);">sub05</li>
+                            <li id="nop" style="color: rgba(0, 0, 0, 0);">sub05</li>
+                            <li id="nop" style="color: rgba(0, 0, 0, 0);">sub05</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="none" style="float: left; width: 1%;">
+            </div>
+            <ul style="font-family: 'Happiness-Sans-Bold'; margin-top: 40px; float: right;">
+                <li><a class="botan" href="https://www.mcdonalds.co.kr/kor/store/rental.do"
+                        style="margin-left: 80px; border: 1px solid rgba(0, 0, 0, 0); padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px; background-color: rgb(187, 0, 0) ; margin-right: 5px;">임차문의</a>
+                </li>
+                <li><a class="botan" href="https://www.mcdonalds.co.kr/kor/story/people/recruit.do"
+                        style="border: 1px solid rgba(0, 0, 0, 0); padding-left: 10px; padding-right: 10px; padding-top: 6px; padding-bottom: 6px; background-color: rgb(204, 157, 5); margin-right: 5px;">RECRUIT</a>
+                </li>
+                <li><a class="botan" href="https://www.mcdonalds.co.kr/eng/main.do"
+                        style="border: 1px solid rgba(0, 0, 0, 0); padding-left: 25px; padding-right: 25px; padding-top: 6px; padding-bottom: 6px; background-color: rgb(0, 94, 0); margin-right: 20px;">ENG</a>
+                </li>
+                <li><a href="asdasd"><img src="search.png"
+                            style="margin-top: 0px; float: right; margin-right: 10%;"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div style="width: 100%; min-width: 1200px;">
+        <div class="banner-container">
+            <div class="banner">
+                <div data-index=1><img src="slide1.png" style="width: 100%;"></div>
+                <div data-index=2><img src="slide2.png" style="width: 100%;"></div>
+                <div data-index=3><img src="slide3.png" style="width: 100%;"></div>
+                <div data-index=4><video src="mcvideo1920x540.mp4" style="width: 100%;" autoplay></video></div>
+            </div>
+        </div>
+    </div>
+    <div class="mctext" style="font-size: 30px; font-weight: bold; margin-left: 50px; margin-right: 1000px;">
+        McDonald'sLIVE</div>
+    <div class="center">
+        <span>
+            <ul class="event">
+                <li class="first">
+                    <a class="boxx" href="http//:www.naver.com"><img src="리워드.png">
+                        <div class="text">첫 적립 시 1500포인트 제공!<br />
+                            마이 맥도날드 리워드 출시!</div>
+                    </a>
+                    <a class="boxx" href="http//:naver.com"><img src="맥피즈.png">
+                        <div class="text">모두가 해피한 스낵 할인<br />
+                            체리 맥피즈 출시!</div>
+                    </a>
+                    <a class="boxx" href="http//:naver.com"><img src="투게더팩.png">
+                        <div class="text">온 가족이 즐길 수 있는<br />
+                            맥도날드 레고랜드 투게더팩!</div>
+                    </a>
+                </li>
+                <li class="second">
+                    <a class="boxx" href="http//:naver.com"><img src="품질.png">
+                        <div class="text">우리가 엄격해질수록<br />
+                            버거는 더 맛있어지니까!</div>
+                    </a>
+                    <a class="boxx" href="http//:naver.com"><img src="한라봉.jpg">
+                        <div class="text">NEW한라봉&애플망고 칠러<br />
+                            <div style="color: rgba(0, 0, 0, 0);">넹</div>
+                        </div>
+                    </a>
+                    <a class="boxx" href="http//:naver.com"><img src="허쉬.png">
+                        <div class="text">진한 초콜릿과 함께! 달콤바삭하게!<br />
+                            허쉬 프레첼 맥플러리 출시</div>
+                    </a>
+                </li>
+            </ul>
+        </span>
+    </div>
+    <div style="display: flex; justify-content: center; width: 100%; min-width: 1200; ">
+        <img src="button.png" width="100px">
+    </div>
+    <footer style="border: 4px solid #292929; height: 300px; margin-top: 30px; width: 100%; min-width: 1100px;">
+        <ul style=" line-height: 30px; margin-top: 30px; font-family: 'Happiness-Sans-Bold';">
+            <li style="color: #ffff00;">개인정보 처리방침</li><br />
+            <li style="color: white">위치정보 이용약관</li><br />
+            <li style="color: white" i>사이트맵</li><br />
+            <li style="color: white">임차문의</li><br />
+            <li style="color: white" i>고객문의</li><br />
+            <li style="color: white">인재채용</li>
+        </ul>
+        <ul style="line-height: 30px; font-size: 13px; margin-top: 30px; font-family: 'Happiness-Sans-Bold';">
+            <li class="info">한국맥도날드(유)</li><br />
+            <li class="info">대표이사: 김기원</li><br />
+            <li class="info">사업자등록번호: 101-81-26409</li><br />
+            <li class="info">전화주문: 1600-5252</li><br />
+            <li class="info">COPYRIGHT © 2019 ALL RIGHTS RESERVED BY McDonald's.</li>
+        </ul>
+        <ul style="float: right; margin-right: 50px; margin-top: 30px;">
+            <li class="footerlinks"><a href="https://www.facebook.com/McDonaldsKorea"><img src="facebook.png"
+                        alt="x"></a></li>
+            <li class="footerlinks"><a href="https://www.facebook.com/McDonaldsKorea"><img src="instr.png" alt="x"></a>
+            </li>
+            <li class="footerlinks"><a href="https://www.facebook.com/McDonaldsKorea"><img src="yout.png" alt="x"></a>
+            </li>
+            <li class="footerlinks"><a href="https://www.facebook.com/McDonaldsKorea"><img src="kakao.png" alt="x"></a>
+            </li>
+            <li class="footerlinks"><a href="https://www.facebook.com/McDonaldsKorea"><img src="web.png" alt="x"></a>
+            </li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        h1 {
+            border-bottom: 2px solid gray;
+        }
+        #counter {
+            float: left;
+            width: 300px;
+        }
+        #right{
+            float: right;
+            width: 360px;
+        }
+        .info{
+            width: 100%;
+            border-top: 3px solid gray;
+        }
+        td{
+            border-bottom: 1px solid gray;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>게시판</h1>
+    <aside id="counter">
+        ▷총 3개의 게시물이 있습니다
+    </aside>
+    <aside id="right">
+        SELECT
+        <select>
+            <option value="title">제목</option>
+            <option value="google.com">글쓴이</option>
+        </select>
+        <input type="text">
+        <input type="button"value="검색" style="background-color: gray; border-radius: 25%;">
+    </aside><br/><br/>
+    <table class="info" style="border-spacing: 0px;">
+        <tr style="background-color: rgb(197, 197, 197); font-size: 20px; border-collapse: 1;">
+            <th style="width: 100px;">번호</th>
+            <th style="width: 1300px;">제목</th>
+            <th style="width: 100px;">글쓴이</th>
+            <th style="width: 100px;">일시</th>
+            <th style="width: 100px;">조회수</th>
+        </tr>
+        <tr onmouseover="this.style.background='gray'" onmouseout="this.style.background='white'">
+            <td style="text-align: center; ">1</td>
+            <td>게시글 1 입니다</td>
+            <td style="text-align: center;">김종기</td>
+            <td style="text-align: center; font-size: 13px;">2022-05-18</td>
+            <td style="text-align: center;">5</td>
+        </tr>
+        <tr onmouseover="this.style.background='gray'" onmouseout="this.style.background='white'">
+            <td style="text-align: center;">2</td>
+            <td>게시글 2 입니다</td>
+            <td style="text-align: center;">김종기</td>
+            <td style="text-align: center; font-size: 13px;">2022-05-18</td>
+            <td style="text-align: center;">5</td>
+        </tr>
+        <tr onmouseover="this.style.background='gray'" onmouseout="this.style.background='white'">
+            <td style="text-align: center;">3</td>
+            <td>게시글 3 입니다</td>
+            <td style="text-align: center;">김종기</td>
+            <td style="text-align: center; font-size: 13px;">2022-05-18</td>
+            <td style="text-align: center;">5</td>
+        </tr>
+    </table>
+    <div style="text-align: center;width: 1000px; float: left;">◀ 이전 1 다음 ▶</div>
+    <div class="button" style="float: right;">
+        <input type="button"value="목록" style="background-color: gray; border-radius: 25%;">
+        <input type="button"value="글쓰기" style="background-color: gray; border-radius: 25%;">
+    </div>
+</body>
+
+</html>
