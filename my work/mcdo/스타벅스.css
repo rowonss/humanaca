@@ -294,8 +294,8 @@ li {
     height: auto;
     margin-bottom: 80px;
     padding-top: 30px;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .companyinfo>ul {
@@ -323,7 +323,6 @@ li {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    margin-left: 60px;
 }
 
 .award>ul>li {
@@ -382,13 +381,23 @@ li {
 }
 
 .lastoflast {
+    margin-top: 22px;
     grid-area: 5/2/6/3;
     width: 100%;
     height: auto;
-    text-align: center;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
+
+.lastoflast>div>ul>li{
+    float: left;
+    color: rgb(129, 129, 129);
+    font-size: 11px;
+    margin-left: 15px;
+}
+
 
 .footerslide1>li>a,
 .footerslide2>li>a,
