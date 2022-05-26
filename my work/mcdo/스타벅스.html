@@ -22,7 +22,7 @@
                 $('.top1>a>.mainlistfont').css("color", "");
             }
         })
-        $(document).on('mouseover', '.top0, .top2, .top3, .top4, .top5, .top6, .sighin, .deptclose', function () {
+        $(document).on('mouseover', '.top0, .top2, .top3, .top4, .top5, .top6, .sighin, .section', function () {
             if (!$(this).hasClass('')) {
                 $('.dept01').slideUp(0);
                 $('.top1>a>.mainlistfont').css("background", "");
@@ -44,7 +44,7 @@
                 $('.top2>a>.mainlistfont').css("color", "");
             }
         })
-        $(document).on('mouseenter', '.top1, .top3, .top4, .top5, .top6, .sighin', function () {
+        $(document).on('mouseenter', '.top1, .top3, .top4, .top5, .top6, .sighin,.section', function () {
             if (!$(this).hasClass('')) {
                 $('.dept02').slideUp(0);
                 $('.top2>a>.mainlistfont').css("background", "");
@@ -64,7 +64,7 @@
                 $('.top3>a>.mainlistfont').css("color", "");
             }
         })
-        $(document).on('mouseenter', '.top1, .top2, .top4, .top5, .top6, .sighin', function () {
+        $(document).on('mouseenter', '.top1, .top2, .top4, .top5, .top6, .sighin, .section', function () {
             if (!$(this).hasClass('')) {
                 $('.dept03').slideUp(0);
                 $('.top3>a>.mainlistfont').css("background", "");
@@ -84,7 +84,7 @@
                 $('.top4>a>.mainlistfont').css("color", "");
             }
         })
-        $(document).on('mouseenter', '.top1, .top2, .top3, .top5, .top6, .sighin', function () {
+        $(document).on('mouseenter', '.top1, .top2, .top3, .top5, .top6, .sighin, .section', function () {
             if (!$(this).hasClass('')) {
                 $('.dept04').slideUp(0);
                 $('.top4>a>.mainlistfont').css("background", "");
@@ -104,7 +104,7 @@
                 $('.top5>a>.mainlistfont').css("color", "");
             }
         })
-        $(document).on('mouseenter', '.top1, .top2, .top3, .top4, .top6, .sighin', function () {
+        $(document).on('mouseenter', '.top1, .top2, .top3, .top4, .top6, .sighin, .section', function () {
             if (!$(this).hasClass('')) {
                 $('.dept05').slideUp(0);
                 $('.top5>a>.mainlistfont').css("background", "");
@@ -124,7 +124,7 @@
                 $('.top6>a>.mainlistfont').css("color", "");
             }
         })
-        $(document).on('mouseenter', '.top0, .top1, .top2, .top3, .top4, .top5, .sighin', function () {
+        $(document).on('mouseenter', '.top0, .top1, .top2, .top3, .top4, .top5, .sighin, .section', function () {
             if (!$(this).hasClass('')) {
                 $('.dept06').slideUp(0);
                 $('.top6>a>.mainlistfont').css("background", "");
@@ -406,7 +406,6 @@
                         </ol>
                     </div>
                 </div>
-                <div class="deptclose" style="width: 100%; height: 5px;"></div>
             </div>
             <div class="dept02"
                 style="position: absolute; top: 127px; display: none; width: 100%;  padding-top: 20px; background: #333; display: flex; justify-content: center; z-index: 5; flex-direction: column;">
@@ -796,7 +795,8 @@
             <div><a href=""><img src="../스타벅스이미지/seide2.png"></a></div>
         </div>
     </div>
-    <section>
+    <section class="section">
+        <p>asdasdas</p>
             <pre>
                 asd
                 asd
@@ -1086,17 +1086,19 @@
                 <li>글로벌 뉴스롤</li>
             </ul>
         </div>
-        <div class="award" style="float: left;">
+        <div class="award">
             <ul style="float: left;">
-                <li style="float: left;"><img src="../스타벅스이미지/여성가족부장관상.jpg"></li>
-                <li style="float: left;"><img src="../스타벅스이미지/행정안전부장관.jpg"></li>
-                <li style="float: left;"><img src="../스타벅스이미지/농림축산식품부 장관상.jpg"></li>
+                <li style="float: left;"><img src="../스타벅스이미지/여가부2.jpg"></li>
+                <li style="float: left;"><img src="../스타벅스이미지/행안부2.jpg"></li>
+                <li style="float: left;"><img src="../스타벅스이미지/농림2.jpg"></li>
                 <li style="float: left;"><img src="../스타벅스이미지/국회산업통상자원.jpg"></li>
-            </ul>
-            <ul style="float: left;">
                 <li style="float: left;"><img src="../스타벅스이미지/대통령직속.jpg"></li>
                 <li style="float: left;"><img src="../스타벅스이미지/동반성장위원회.jpg"></li>
             </ul>
+            <!-- <ul style="float: left;">
+                <li style="float: left;"><img src="../스타벅스이미지/대통령직속.jpg"></li>
+                <li style="float: left;"><img src="../스타벅스이미지/동반성장위원회.jpg"></li>
+            </ul> -->
         </div>
         </div>
         <div class="footerlast">
@@ -1119,6 +1121,17 @@
             </ul>
         </div>
         <div class="lastoflast">
+            <div>
+            <ul>
+                <li>사업자등록번호 : 201-81-21515</li>
+                <li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li>
+                <li>TEL : 1522-3232</li>
+                <li>개인정보 책임자</li>
+            </ul>
+            </div>
+            <div>
+                <li>© 2022 Starbucks Coffee Company. All Rights Reserved.</li>
+            </div>
         </div>
     </footer>
 
