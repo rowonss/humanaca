@@ -5,29 +5,110 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        // 1--------------------------------------------------------------------------
+        $(document).on('click', '.topmusic', function () {
+            $('.sidelist').slideDown(700);
+            $('.body').css("background", "");
+        });
+        $(document).on('click', '.toppicture', function () {
+            if (!$(this).hasClass('')) {
+                $('.sidelist').slideUp(500);
+            }
+        })
+        $(document).on('click', '.rock', function () {
+            $('.rocklist').slideDown(700);
+            $('.rock').css("display", "none");
+                $('.rockup').css("display", "block");
+        });
+        $(document).on('click', '.rockup', function () {
+            if (!$(this).hasClass('')) {
+                $('.rocklist').slideUp(500);
+                $('.rock').css("display", "block");
+                $('.rockup').css("display", "none");
+            }
+        })
+    </script>
 </head>
 
-<body>
+<body class="body">
     <header>
         <div class="title">
-            <h1>Personal Page</h1>
+            <h1><a href="index.html"> Personal Page </a></h1>
         </div>
         <nav>
             <div class="topmenu">
                 <ul>
-                    <li class="topmenuhead"><a href="javascript=void(0)"> Academy </a></li>
-                    <li><a href="javascript=void(0)"> Caldener </a></li>
-                    <li><a href="javascript=void(0)"> Picktures </a></li>
-                    <li><a href="javascript=void(0)">  Musics</a></li>
-                    <li><a href="javascript=void(0)"> Notion Page </a></li>
-                    <li><a href="javascript=void(0)"> Git Hub </a></li>
+                    <li class="topmenuhead"><a href="javascript:void(0)"> Academy </a></li>
+                    <li><a class="topcalender" href="javascript:void(0)"> Calender </a></li>
+                    <li><a class="toppicture" href="javascript:void(0)"> Picktures </a></li>
+                    <li><a class="topmusic" href="javascript:void(0)">  Musics</a></li>
+                    <li><a class="topnotion" href="https://www.notion.so/HTML-e79bb0fc6ba14c4f819ba89549833481"> Notion Page </a></li>
+                    <li><a class="topgithub" href="https://github.com/rowonss"> Git Hub </a></li>
                 </ul>
             </div>
         </nav>
     </header>
+    <aside>
+        <div class="sidelist">
+            <ul>
+                <li><a class="classic" href="javascript:void(0)">Classic <span style="float: right;">▾</span></a>
+                    <ul>
+
+                    </ul>
+                </li>
+                <li><a class="jazz" href="javascript:void(0)">Jazz <span style="float: right;">▾</span></a>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li><a class="pop" href="javascript:void(0)">Pop <span style="float: right;">▾</span></a>
+                    <ul>
+                        
+                    </ul>
+                </li>
+                <li><a class="ballad" href="javascript:void(0)">Ballad <span style="float: right;">▾</span></a>
+                    <ul>
+
+                    </ul>
+                </li>
+                <li><a class="R&B" href="javascript:void(0)">R & B <span style="float: right;">▾</span></a>
+                    <ul>
+
+                    </ul>
+                </li>
+                <li><a class="rock" href="javascript:void(0)">Rock <span style="float: right;">▾</span></a>
+                    <a class="rockup" style="display: none;" href="javascript:void(0)">Rock <span style="float: right;">▴</span></a>
+                    <ul class="rocklist">
+                        <li><a class="RSR" href="javascript:void(0)">Shinnig Road</a></li>
+                        <li><a class="Ralu" href="javascript:void(0)">알루미늄</a></li>
+                        <li><a class="RAnti" href="javascript:void(0)">Antifreeze</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </aside>
     <section>
         <div style="width:100%; height: 500px; display: flex; justify-content: center;">
-            <img src="/images/1669932.png" style="width: 300px; height: 300px; margin-top: 50px;">
+            <div style="display: grid; justify-items: center; grid-template-columns: 1fr; grid-template-rows: auto;">
+                <div style="float: left;">
+                    
+                </div>
+                <div style="float: left;">
+                    
+                </div>
+                <div style="float: left;">
+                    
+                </div>
+                <div style="float: left;">
+                    
+                </div>
+            </div>
         </div>
     </section>
     <footer>
