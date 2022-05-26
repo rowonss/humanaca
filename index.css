@@ -147,7 +147,30 @@ section{
     font-weight: bold;
     font-size: 20px;
 }
+.sidelist>ul>li>a:hover{
+    background: rgb(65, 65, 65);
+    transition-duration: 0.5s;
+    border-radius: 10px;
+}
 
 .rocklist{
     display: none;
+}
+
+.rocklist>li>a{
+    padding: 3px;
+    display: block;
+    color: rgb(161, 161, 161);
+}
+
+.rocklist>li>a:hover{
+    background: rgb(65, 65, 65);
+    transition-duration: 0.5s;
+    border-radius: 5px;
+}
+
+.rocklist>li{
+    width: 100px;
+    margin-left: 30px;
+    margin-bottom: 10px;
 }

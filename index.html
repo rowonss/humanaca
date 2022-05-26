@@ -29,6 +29,16 @@
                 $('.rockup').css("display", "none");
             }
         })
+        $(document).on('click', '.RSR', function () {
+            $('.SRvideo').slideDown(0);
+        });
+        $(document).on('click', '.rockup', function () {
+            if (!$(this).hasClass('')) {
+                $('.rocklist').slideUp(500);
+                $('.rock').css("display", "block");
+                $('.rockup').css("display", "none");
+            }
+        })
     </script>
 </head>
 
@@ -96,8 +106,8 @@
     <section>
         <div style="width:100%; height: 500px; display: flex; justify-content: center;">
             <div style="display: grid; justify-items: center; grid-template-columns: 1fr; grid-template-rows: auto;">
-                <div style="float: left;">
-                    
+                <div class="SRvideo" style="float: left; display: none;">
+                    <iframe style="float: left;" width="650" height="435" src="https://www.youtube.com/embed/05BWsYqMiYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div style="float: left;">
                     
