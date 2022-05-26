@@ -32,6 +32,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Roboto:wght@300&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -157,6 +160,11 @@ li:not(.toplist) {
 .listoflist {
     float: left;
     margin-left: 30px;
+}
+
+.signin{
+    font-family: 'Gothic A1', sans-serif;
+font-family: 'Roboto', sans-serif;
 }
 
 .invimenu {
@@ -311,7 +319,9 @@ li {
 }
 
 .ftcinfolisthd {
-    font-size: 16px;
+    font-family: 'Gothic A1', sans-serif;
+font-family: 'Roboto', sans-serif;
+    font-size: 15px;
     margin-bottom: 12px;
 }
 
