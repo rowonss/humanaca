@@ -139,6 +139,7 @@ section{
 .pictures>ul>li{
     margin-left: 10px;
     margin-bottom: 10px;
+    float: left;
 }
 
 .picturetop{
@@ -146,8 +147,9 @@ section{
 }
 
 .pictures>ul>li>img{
-    width: 180px;
-    height: 250px;
+    float: left;
+    width: 13em;
+    border-radius: 20px;
 }
 
 li>img:hover{
