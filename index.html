@@ -7,38 +7,16 @@
     <link rel="stylesheet" href="index.css" type="text/css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script>
-        // 1--------------------------------------------------------------------------
-        $(document).on('click', '.topmusic', function () {
-            $('.sidelist').slideDown(700);
-            $('.body').css("background", "");
-        });
         $(document).on('click', '.toppicture', function () {
             if (!$(this).hasClass('')) {
-                $('.sidelist').slideUp(500);
+                $('.picturetop').slideDown(300);
+                $('.moon').css("display", "none");
             }
         })
-        $(document).on('click', '.rock', function () {
-            $('.rocklist').slideDown(700);
-            $('.rock').css("display", "none");
-                $('.rockup').css("display", "block");
-        });
-        $(document).on('click', '.rockup', function () {
-            if (!$(this).hasClass('')) {
-                $('.rocklist').slideUp(500);
-                $('.rock').css("display", "block");
-                $('.rockup').css("display", "none");
-            }
-        })
-        $(document).on('click', '.RSR', function () {
-            $('.SRvideo').slideDown(0);
-        });
-        $(document).on('click', '.rockup', function () {
-            if (!$(this).hasClass('')) {
-                $('.rocklist').slideUp(500);
-                $('.rock').css("display", "block");
-                $('.rockup').css("display", "none");
-            }
-        })
+        $(document).ready(function () 
+            {
+                $("img").attr("onclick", "window.open(this.src)");
+            });
     </script>
 </head>
 
@@ -53,73 +31,53 @@
                     <li class="topmenuhead"><a href="javascript:void(0)"> Academy </a></li>
                     <li><a class="topcalender" href="javascript:void(0)"> Calender </a></li>
                     <li><a class="toppicture" href="javascript:void(0)"> Picktures </a></li>
-                    <li><a class="topmusic" href="javascript:void(0)">  Musics</a></li>
-                    <li><a class="topnotion" href="https://www.notion.so/HTML-e79bb0fc6ba14c4f819ba89549833481"> Notion Page </a></li>
+                    <li><a class="topmusic" href="musicpage.html"> Musics</a></li>
+                    <li><a class="topnotion" href="https://www.notion.so/HTML-e79bb0fc6ba14c4f819ba89549833481"> Notion
+                            Page </a></li>
                     <li><a class="topgithub" href="https://github.com/rowonss"> Git Hub </a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <aside>
-        <div class="sidelist">
-            <ul>
-                <li><a class="classic" href="javascript:void(0)">Classic <span style="float: right;">▾</span></a>
-                    <ul>
-
-                    </ul>
-                </li>
-                <li><a class="jazz" href="javascript:void(0)">Jazz <span style="float: right;">▾</span></a>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </li>
-                <li><a class="pop" href="javascript:void(0)">Pop <span style="float: right;">▾</span></a>
-                    <ul>
-                        
-                    </ul>
-                </li>
-                <li><a class="ballad" href="javascript:void(0)">Ballad <span style="float: right;">▾</span></a>
-                    <ul>
-
-                    </ul>
-                </li>
-                <li><a class="R&B" href="javascript:void(0)">R & B <span style="float: right;">▾</span></a>
-                    <ul>
-
-                    </ul>
-                </li>
-                <li><a class="rock" href="javascript:void(0)">Rock <span style="float: right;">▾</span></a>
-                    <a class="rockup" style="display: none;" href="javascript:void(0)">Rock <span style="float: right;">▴</span></a>
-                    <ul class="rocklist">
-                        <li><a class="RSR" href="javascript:void(0)">Shinnig Road</a></li>
-                        <li><a class="Ralu" href="javascript:void(0)">알루미늄</a></li>
-                        <li><a class="RAnti" href="javascript:void(0)">Antifreeze</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </aside>
     <section>
-        <div style="width:100%; height: 500px; display: flex; justify-content: center;">
-            <div style="display: grid; justify-items: center; grid-template-columns: 1fr; grid-template-rows: auto;">
-                <div class="SRvideo" style="float: left; display: none;">
-                    <iframe style="float: left;" width="650" height="435" src="https://www.youtube.com/embed/05BWsYqMiYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div style="float: left;">
-                    
-                </div>
-                <div style="float: left;">
-                    
-                </div>
-                <div style="float: left;">
-                    
-                </div>
+        <div class="moon">
+            <img src="/images/1669932.png" style="width: 250px; height: 250px;">
+        </div>
+        <div class="picturetop">
+            <div class="pictures">
+                <ul>
+                    <li><img src="/pictures/09E416E8-E70C-4E47-8B1A-680FD62CA61D.JPG"> </li>
+                    <li><img src="/pictures/2797224A-21CF-40F9-823F-8B4C2159D911.JPG"></li>
+                    <li><img src="/pictures/64323E8D-57FE-40CF-8B40-2BBF4F48674D.JPG"></li>
+                    <li><img src="/pictures/E62CE86D-E4BB-4409-9F3B-B6CF89E4646B.JPG"></li>
+                </ul>
+                <ul>
+                    <li><img src="/pictures/14465FDF-E069-4520-80A4-134FD18B3778.JPG"></li>
+                    <li><img src="/pictures/IMG_5833.jpg"></li>
+                    <li><img src="/pictures/IMG_6091.JPG"></li>
+                    <li><img src="/pictures/IMG_6092.JPG"></li>
+                </ul>
+                <ul>
+                    <li><img src="/pictures/IMG_6808.JPG"></li>
+                    <li><img src="/pictures/IMG_7663.JPG"></li>
+                    <li><img src="/pictures/IMG_7673.JPG"></li>
+                    <li><img src="/pictures/KakaoTalk_20220527_104846790.jpg"></li>
+                </ul>
+                <ul>
+                    <li><img src="/pictures/KakaoTalk_20220527_104846790_01.jpg"></li>
+                    <li><img src="/pictures/KakaoTalk_20220527_104846790_02.jpg"></li>
+                    <li><img src="/pictures/KakaoTalk_20220527_104846790_03.jpg"></li>
+                    <li><img src="/pictures/KakaoTalk_20220527_104846790_04.jpg"></li>
+                </ul>
+                <ul>
+                    <li><img src="/pictures/KakaoTalk_20220527_104846790_05.jpg"> </li>
+                    <li><img src="/pictures/KakaoTalk_20220527_104846790_06.jpg"> </li>
+                    <li><img src="/pictures/KakaoTalk_20220527_104846790_07.jpg"> </li>
+                    <li><img src="/pictures/KakaoTalk_20220527_104846790_08.jpg"> </li>
+                </ul>
             </div>
         </div>
+
     </section>
     <footer>
 
