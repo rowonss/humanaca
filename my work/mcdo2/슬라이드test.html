@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="슬라이드test.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.h_menu > li').mouseenter(function () {
+                let menu_i = $(this).index();
+                if (menu_i < 4) {
+                    $('.menu_pan').css({
+                        display: 'none'
+                    }).eq($(this).index()).css({
+                        display: 'block'
+                    })
+                }
+            });
+            $('.h_menu > li').mouseleave(function () {
+                let menu_i = $(this).index();
+                if (menu_i < 4) {
+                    $('.menu_pan').eq($(this).index()).css({
+                        display: 'none'
+                    })
+                }
+            }) 
+            $('.menu_pan').mouseenter(function () {
+                $('.menu_pan').eq($(this).index()).css({
+                    display: 'block'
+                })
+            }) 
+            $('.menu_pan').mouseleave(function () {
+                $('.menu_pan').eq($(this).index()).css({
+                    display: 'none'
+                })
+            })
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="w_1350">
+            <div class="h_L">
+                <ul class="h_menu">
+                    <li><a href="./categoryPage.html"> WOMEN </a></li>
+                    <li><a href="./categoryPage.html"> MEN </a></li>
+                    <li><a href="./categoryPage.html"> COMMUNITY </a></li>
+                    <li><a href="./categoryPage.html"> ABOUT US </a></li>
+                    <li class="bar"></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="menu_pan">
+                <div class="w_1350">
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> 컬렉션</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 신제품</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 베스트셀러</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 아시아 핏</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> ONLINE ONLY</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> lululemon LAB</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 너무 많이 만들었어요</a> </div>
+                    </div>
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> 액티비티</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 요가</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 러닝</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 트레이닝</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 골프</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 데일리 웨어</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 스윔</a> </div>
+                    </div>
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> 상의</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 브라</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 탱크</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 숏 슬리브</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 롱 슬리브</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 드레스 + 원지</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 재킷 + 후디</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 스윔 탑</a> </div>
+                    </div>
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> 하의</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 팬츠</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 크롭</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 쇼츠</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 스커트</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 언더웨어</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 스윔 바텀</a> </div>
+                    </div>
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> 액세서리</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 가방</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 매트 + 소품</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 헤드밴드 + 모자</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 스카프 + 장갑</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 양말</a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu_pan">
+                <div class="w_1350">
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> 컬렉션</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 신제품</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 베스트셀러</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 아시아 핏</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> ONLINE ONLY</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> lululemon LAB</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 너무 많이 만들었어요</a> </div>
+                    </div>
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> 액티비티</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 러닝</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 트레이닝</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 골프</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 요가</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 데일리 웨어</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 스윔</a> </div>
+                    </div>
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> 상의</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 탱크</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 숏 슬리브</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 롱 슬리브</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 재킷 + 후디</a> </div>
+                    </div>
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> 하의</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 팬츠</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 쇼츠</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 언더웨어</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 스윔 바텀</a> </div>
+                    </div>
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> 액세서리</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 가방</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 매트 + 소품</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 헤드밴드 + 모자</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 장갑</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 양말</a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu_pan">
+                <div class="w_1350">
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> #스웻라이프</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 디지털 허브</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 온라인 클래스</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 서울 런클럽</a> </div>
+                    </div>
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> 앰배서더</a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu_pan">
+                <div class="w_1350">
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> 브랜드 스토리</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 우리의 비전</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 우리의 제품</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 우리의 커뮤니티</a> </div>
+                    </div>
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> 우리의 약속</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> IDEA</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> Here to Be</a> </div>
+                    </div>
+                    <div class="menu_category">
+                        <div class="category"><a href="./categoryPage.html"> 커리어 기회</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> #joblove</a> </div>
+                        <div class="category"><a href="./categoryPage.html"> 지원하기</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

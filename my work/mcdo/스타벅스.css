@@ -10,7 +10,7 @@
     .companyinfo{
         display: none;
     }
-    section {
+    .section {
         padding-top: 69px;
     }
     .footerblank{
@@ -22,15 +22,18 @@
     .mobile {
         display: none;
     }
-    section {
+    /* .section {
         padding-top: 125px;
-    }
+    } */
     .footerslidemedia{
         display: none
     }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Roboto:wght@300&display=swap');
+
 
 * {
     margin: 0;
@@ -47,7 +50,7 @@ header {
     z-index: 998;
 }
 
-section{
+.section{
     width: 100%;
     height: auto;
     /* padding-top: 125px; */
@@ -82,7 +85,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px 0 35px 0;
+    padding: 0 0 35px 0;
 }
 
 .footerslidemedia{
@@ -157,6 +160,11 @@ li:not(.toplist) {
 .listoflist {
     float: left;
     margin-left: 30px;
+}
+
+.signin{
+    font-family: 'Gothic A1', sans-serif;
+font-family: 'Roboto', sans-serif;
 }
 
 .invimenu {
@@ -293,6 +301,9 @@ li {
     width: 1182px;
     height: auto;
     margin-bottom: 80px;
+    padding-top: 30px;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .companyinfo>ul {
@@ -308,7 +319,9 @@ li {
 }
 
 .ftcinfolisthd {
-    font-size: 16px;
+    font-family: 'Gothic A1', sans-serif;
+font-family: 'Roboto', sans-serif;
+    font-size: 15px;
     margin-bottom: 12px;
 }
 
@@ -317,15 +330,13 @@ li {
     width: 100%;
     height: auto;
     background: #282828;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .award>ul>li {
     float: left;
-}
-
-.award {
-    margin-top: 20px;
-    width: 100%;
 }
 
 .footerblank {
@@ -380,13 +391,23 @@ li {
 }
 
 .lastoflast {
+    margin-top: 22px;
     grid-area: 5/2/6/3;
     width: 100%;
     height: auto;
-    text-align: center;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
+
+.lastoflast>div>ul>li{
+    float: left;
+    color: rgb(129, 129, 129);
+    font-size: 11px;
+    margin-left: 15px;
+}
+
 
 .footerslide1>li>a,
 .footerslide2>li>a,
