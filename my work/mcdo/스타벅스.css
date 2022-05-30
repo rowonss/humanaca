@@ -297,7 +297,7 @@ li {
 
 .companyinfo {
     grid-area: 1/2/2/3;
-    background: url(../스타벅스이미지/footer_logo.png) no-repeat right 10px;
+    background: url(starbucks/footer_logo.png) no-repeat right 10px;
     width: 1182px;
     height: auto;
     margin-bottom: 80px;

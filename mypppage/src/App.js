@@ -18,7 +18,7 @@ export default class SimpleSlider extends Component {
         <h2> Single Item</h2>
         <Slider {...settings}>
           <div>
-            <h3>1</h3>
+            <img className="image" alt="moon" src="images/1669932.png"></img>
           </div>
           <div>
             <h3>2</h3>
