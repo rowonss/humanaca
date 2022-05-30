@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        a=1;
-        while(a<=10){
-            document.write(a);
+        for(a=2; a<=20; a++){
+            if(a==5){break}
+            document.write(a+"<br/>")
+            for(b=2; b<=9; b++){
+                document.write(a+"*"+b+"="+(a*b)+"<br/>")
+            }
+            document.write("<br/>")
         }
+        var con=confirm("어떤 값이 나올까")
+        document.write(con)
     </script>
 
 </body>
+
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ui시나리오.css" type="text/css">
+</head>
+
+<body style="background-color: rgb(83, 83, 83);">
+    <header>
+        <h1 style="margin-top: 30px; padding-left: 50px; color: rgb(4, 182, 43);">스타벅스 홈페이지 UI 구성</h1>
+    </header>
+
+    <section style="display: flex; flex-direction: column; align-items:center;">
+        <div style="width: 100%;">
+            <ul>
+                <li style="width: 50%;"><img src="/ui시나리오/시나리오이미지/top.png" style="width: 100%;"></li>
+                <li style="margin: 30px; margin-left: 150px;">
+                    <h3>최상단 메뉴 구성</h3>
+                    <ul>
+                        <li style="margin-bottom: 15px;">1. 로고</li><br />
+                        <li style="margin-bottom: 15px;">2. 상단 네비게이션 바</li><br />
+                        <li style="margin-bottom: 15px;">3. 하단 네비게이션 바</li><br />
+                        <li>4. 드롭다운 메뉴</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div style="width: 100%; border-bottom: 3px solid rgb(61, 61, 61);">
+            <h2 style="margin-left: 40px; color: rgb(233, 217, 197);">1. 2. 3. 이 하나의 class=firstwrap에 묶여있는
+                형태<br /><br /> 4.은 독립적으로 최상단에 위치함 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(우측 사이드 메뉴 제외)</h2>
+        </div>
+        <div style="width: 100%; margin-top: 50px;">
+            <ul>
+                <li style="width: 50%; float: left;"><img src="/ui시나리오/시나리오이미지/top list.png"></li>
+                <li  style="width: 50%; float: right;">
+                    <ul style="width: 45%; float: right;">
+                        <li style="float: right; font-size: 18px; margin-top: 30px;">1. ul,li 태그 사용 <br/>float 스타일을 사용해 정렬</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div style="width: 100%;">
+            <ul>
+                <li><img src="/ui시나리오/시나리오이미지/top list button.png"></li>
+                <li style="font-size: 23px; margin-left: 30px; margin-top: 30px;">2. 하단 네비게이션 바도 동일하나 a 태그 안의 p 태그에 padding값을 줌으로서<br/> 글자보다 더 넓은 버튼 면적 확보</li>
+            </ul>
+        </div>
+        <div style="width: 100%; border-bottom: 3px solid rgb(61, 61, 61);">
+            <ul>
+                <li><img src="/ui시나리오/시나리오이미지/secret.png" style="margin-left: 400px;"></li>
+                <li style="font-size: 23px; margin-left: 30px; margin-top: 30px;"> jquery를 사용해 마우스가 해당 버튼과 드롭다운 메뉴를 벗어났을 시 메뉴가 사라질 수 있게 하며<br/> 버튼 좌측엔 보이지 않는 버튼을 만들어 같은 효과를 부여함</li>
+                <li style="font-size: 23px; margin-left: 30px; margin-top: 30px; padding-bottom: 30px;">커서가 메뉴 하단을 통해 벗어났을 시를 위해, section과 footer에도 같은 효과 부여</li>
+            </ul>
+        </div>
+        <div style="width: 100%;">
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+    </section>
+</body>
+
+</html>
