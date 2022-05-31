@@ -6,22 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-
-<body>
     <script>
-        for(a=2; a<=20; a++){
-            if(a==5){break}
-            document.write(a+"<br/>")
-            for(b=2; b<=9; b++){
-                document.write(a+"*"+b+"="+(a*b)+"<br/>")
-            }
-            document.write("<br/>")
+        function hey(a,b){
+            add=("a"+"*"+"b"+"="+(a*b))
+            return add;
         }
-        var con=confirm("어떤 값이 나올까")
-        document.write(con)
+        document.write(hey(1,2));
     </script>
-
+</head>
+<body>
 </body>
 
 </html>
