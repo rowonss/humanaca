@@ -8,18 +8,30 @@
     <title>Document</title>
     <script>
         function solution(n) {
-            for( ; n)
-
-
-    var answer = 0;
-    return answer;
-}
+            let answer = 0;
+            for (let i = 0; i <= n; i++) {
+                let count = 1;
+                for (let m = 0; m <= i/2; m++) {
+                    if (i % m == 0) {
+                        count += 1
+                        if(count>2)
+                        break;
+                    }
+                }
+                if (count == 2) {
+                    answer += 1
+                }
+            }
+            return answer;
+        }
+        document.write(solution(10))
     </script>
 </head>
 
 <body>
 </body>
-    <div>
-        
-    </div>
+<div>
+
+</div>
+
 </html>

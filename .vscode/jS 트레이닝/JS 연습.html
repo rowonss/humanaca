@@ -7,13 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function hey(a,b){
-            add=("a"+"*"+"b"+"="+(a*b))
-            return add;
+        const arr = [1, 2];
+
+        let elementExistYn = true;
+
+        if (arr.indexOf(2) < 0) {
+            elementExistYn = false;
         }
-        document.write(hey(1,2));
+
+        document.writeln(elementExistYn); // false
     </script>
 </head>
+
 <body>
 </body>
 
