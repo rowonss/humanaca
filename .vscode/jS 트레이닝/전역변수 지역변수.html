@@ -10,19 +10,29 @@
 
 <body>
     <script>
-        function solution(participant, completion) {
-            var answer = '';
-            var num=0;
-            for(let i=0; i<=participant.length; i++ ){
-                for(let m=0; m<=i; m++){
-                    if(participant[i]==completion[m]){
-                        participant[i]
-                    }
+        function solution(arr) {
+            if (arr.length === 1) {
+                arr[0] = -1
+                return arr;
+            }
+
+            var num = 0;
+            var p = arr.slice();
+            function asd() {
+                p.sort()
+                num = p[0]
+                return num;
+            };
+            asd(num);
+            for (let i = 0; i <= arr.length; i++) {
+                if (arr[i] == num) {
+                    arr.splice(i, 1)
                 }
             }
-            answer=participant
-            return answer;
+            return arr;
         }
+        document.write(solution([1]))
+        
     </script>
 
     <body>
