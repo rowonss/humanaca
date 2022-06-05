@@ -40,7 +40,37 @@
     </header>
     <section>
         <div class="moon">
-            <img src="/images/1669932.png" style="width: 250px; height: 250px;">
+            <canvas id="canvas" width="300" height="300"></canvas>
+
+            <script type="importmap">
+                {
+                    "imports": {
+                        "three":"https://unpkg.com/three@0.141.0/build/three.module.js",
+                        "GLTFLoader": "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+                    }
+                }
+            </script>
+            
+            <script type="module">
+
+                import {GLTFLoader} from 'GLTFLoader';
+                import * as THREE from 'three';
+                
+                let scene = new three.Scene();
+                let renderer = new three.WebGLRenderer({
+                    canvas : document.querySelector('#canvas')
+                });
+
+                let camera = new three.perspectivecamera(30,1);
+
+                let loader = new GLTFLoader();
+                loader.load('toon_cat_free/scene.gltf', function(gltf){
+                    scene.add(gltf.scene);
+                    renderer.render(scene, camera);
+                });
+
+
+            </script>
         </div>
         <div class="portfoliotop">
             <div class="portfolio">
