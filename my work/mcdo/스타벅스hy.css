@@ -1,10 +1,17 @@
 body {
     margin: 0px;
     padding: 0px;
-    max-width: 1920px;
     min-width: 800px;
-    max-height: 1080px;
     min-height: 600px;
+}
+
+.section_mainbackground_yhy {
+    background-image: url(backgroundtumblr.jpg);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    top: 1px;
 }
 
 [class*=section] {
@@ -17,13 +24,11 @@ body {
     background-image: url(summer.jpg);
     width: 100%;
     height: 646px;
-    /* position: relative; */
     display: grid;
     grid-template-columns: 1fr 1200px 1fr;
 }
 
 .section1_oddments_yhy {
-    /* position: absolute; */
     position: relative;
     grid-column: 2/3;
 }
@@ -161,6 +166,7 @@ body {
 
 .section2_yhy {
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 170px 1fr;
     grid-template-rows: 62px auto;
     position: relative;
@@ -753,7 +759,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-image: url(backgroundtumblr.jpg);
+    background-color: transparent;
 }
 
 .area_section6_yhy {
@@ -877,6 +883,7 @@ body {
 .section7_yhy {
     width: 100%;
     height: 400px;
+    background-color: white;
     background-image: url(backgroundwhite.png);
     display: flex;
     flex-direction: row;
@@ -889,7 +896,6 @@ body {
     min-width: 870px;
     max-width: 1100px;
     height: 100%;
-    background-color: transparent;
     display: grid;
     grid-template-columns: 65% 35%;
     grid-template-rows: 30% 30% 40%;
