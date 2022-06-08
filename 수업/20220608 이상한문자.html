@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(s) {
+    var answer = '';
+    let ss = '';
+    let reset = 0;
+    for(let i=0; i<s.length; i++){
+        if(s[i]===" "){
+            ss+=" ";
+            reset = 0;
+        }
+        else{
+            if(reset%2===0){
+                ss += s[i].toUpperCase();
+            }
+            else{
+                ss += s[i].toLowerCase();
+            }
+            reset++;
+        }
+    }
+    return ss;
+    
+}
+    </script>
+</body>
+</html>
