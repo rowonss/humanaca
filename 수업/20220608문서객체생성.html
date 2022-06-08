@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <script>
+        function add() {
+            let header=document.createElement('h3'); // 요소 노드 생성
+            let textNode=document.createTextNode('내 이름은 김종기입니다'); // 텍스트 노드 생성
+            header.appendChild(textNode); // 요소 노드와 텍스트 노드 연결
+            document.body.appendChild(header); // 생성한 문서 객체를 body에 추가
+        };
+    </script>
+    <a href="#" onclick="add()">당신의 이름은 무엇입니까?</a>
+</body>
+</html>
