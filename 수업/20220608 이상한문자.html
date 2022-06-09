@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        function solution(s) {
-    var answer = '';
-    let ss = '';
-    let reset = 0;
-    for(let i=0; i<s.length; i++){
-        if(s[i]===" "){
-            ss+=" ";
-            reset = 0;
-        }
-        else{
-            if(reset%2===0){
-                ss += s[i].toUpperCase();
+        function solution(nums) {
+            var answer = -1;
+
+            for (let fir = 0; fir <= nums.length - 2; fir++) {
+                for (let sec = fir + 1; sec <= nums.length - 1; sec++) {
+                    for (let thr = sec + 1; thr <= nums.length; thr++) {
+                        let count =0;
+                        sum=(nums[fir] + nums[sec] + nums[thr])
+                        for(let k=0; k<=sum; k++){
+                            if(sum%k==0){
+                                count+=1
+                            }
+                        }
+                        if(count==2){
+                            answer+=1
+                            count=0
+                        }
+                        else{
+                            count=0
+                        }
+                }
+
             }
-            else{
-                ss += s[i].toLowerCase();
-            }
-            reset++;
         }
-    }
-    return ss;
-    
-}
+        }
+        return answer;
     </script>
 </body>
+
 </html>

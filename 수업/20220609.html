@@ -1,39 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        function solution(new_id) {
-    var answer = '';
-    new_id = new_id.toLowerCase();
-    new_id = new_id.replace(/[^\w-._]+/g,'')
-    new_id = new_id.replace(/\.+/g,".")
-    new_id = new_id.replace(/^\.|\.$/g,'')
-    new_id = new_id.replace(/^&/,'a')
-    new_id = new_id.slice(0,15)
-    let last = new_id.substr(-1)
-    if(last=="."){
-        new_id = new_id.slice(0,-1)
-    }
-    if(new_id.length<=2){
-        let inlast = new_id.substr(-1)
-        while(new_id.length<3){
-            new_id = new_id+=inlast
-            if(new_id.length==3){
-                break;
+        function solution(answers) {
+            let a = [1];
+            let b = [2];
+            let c = [3];
+            let ar = 0;
+            let br = 0;
+            let cr = 0;
+
+            for (let aa = 1; aa < answers.length; aa++) {
+                a.push(2)
+                a.push(3)
+                a.push(4)
+                a.push(5)
+                a.push(1)
             }
+            for (let bb = 1; bb < answers.length; bb++) {
+                b.push(1)
+                b.push(2)
+                b.push(3)
+                b.push(2)
+                b.push(4)
+                b.push(2)
+                b.push(5)
+                b.push(2)
+            }
+            for (let cc = 1; cc < answers.length; cc++) {
+                c.push(3)
+                c.push(1)
+                c.push(1)
+                c.push(2)
+                c.push(2)
+                c.push(3)
+                c.push(3)
+                c.push(4)
+                c.push(4)
+                c.push(5)
+                c.push(5)
+                c.push(3)
+            }
+
+            for (let i = 0; i < answers.length; i++) {
+                if (answers[i] == a[i]) {
+                    ar += 1
+                }
+            }
+            for (let i = 0; i < answers.length; i++) {
+                if (answers[i] == b[i]) {
+                    br += 1
+                }
+            }
+            for (let i = 0; i < answers.length; i++) {
+                if (answers[i] == c[i]) {
+                    cr += 1
+                }
+            }
+            if (ar == br && br == cr) {
+                return [1, 2, 3]
+            }
+            else if (ar == cr && ar > br) {
+                return [1, 3]
+            } else if (br == cr && cr > ar) {
+                return [2, 3]
+            } else if (ar == br && ar > cr) {
+                return [1, 2]
+            } else if (ar > br && ar > cr) {
+                return [1]
+            } else if (br > ar && br > cr) {
+                return [2]
+            } else if (cr > br && cr > ar) {
+                return [3]
+            } 
         }
-    }
-    
-    
-    return new_id;
-}
-document.write(solution("=.="))
     </script>
 </body>
+
 </html>
