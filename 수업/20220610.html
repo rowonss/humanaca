@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(phone_number) {
+    var answer = '';
+    for(let i=0; i<phone_number.length-4; i++){
+        answer+="*"
+    }
+    let j=phone_number.length-1
+        answer+=phone_number[j]
+    answer+=phone_number[j-1]
+    answer+=phone_number[j-2]
+    answer+=phone_number[j-3]
+    return answer;
+}
+document.write(solution("123232464565673"))
+    </script>
+</body>
+</html>
