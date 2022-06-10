@@ -1,26 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        function solution(phone_number) {
-    var answer = '';
-    for(let i=0; i<phone_number.length-4; i++){
-        answer+="*"
-    }
-    let j=phone_number.length-1
-        answer+=phone_number[j]
-    answer+=phone_number[j-1]
-    answer+=phone_number[j-2]
-    answer+=phone_number[j-3]
-    return answer;
-}
-document.write(solution("123232464565673"))
+        function solution(id_list, report, k) {
+            var answer = [];
+            let reportlist = [];
+            let repo_muz = 0;
+            let repo_fro = 0;
+            let repo_ape = 0;
+            let repo_neo = 0;
+            let repo_rya = 0;
+            let repo_con = 0;
+            let jail = [];
+            let result = [];
+            for (let i = 0; i < report.length; i++) {
+                reportlist.push(report[i].split(" "))
+                for (let j = 1; j < reportlist[i].length; j++) {
+                    if (reportlist[i][j] == "muzi") {
+                        repo_muz += 1;
+                    } else if (reportlist[i][j] == "frodo") {
+                        repo_fro += 1;
+                    } else if (reportlist[i][j] == "apeach") {
+                        repo_ape += 1;
+                    } else if (reportlist[i][j] == "neo") {
+                        repo_neo += 1;
+                    } else if (reportlist[i][j] == "rya") {
+                        repo_rya += 1;
+                    } else if (reportlist[i][j] == "con") {
+                        repo_con += 1;
+                    }
+                }
+            }
+            if (repo_muz >= k) {
+                jail.push("muzi")
+            }
+            if (repo_fro >= k) {
+                jail.push("frodo")
+            }
+            if (repo_ape >= k) {
+                jail.push("apeach")
+            }
+            if (repo_neo >= k) {
+                jail.push("neo")
+            }
+            if (repo_rya >= k) {
+                jail.push("ryan")
+            }
+            if (repo_con >= k) {
+                jail.push("con")
+            }
+            
+            let arr = Array(id_list.length).fill(0)
+
+            for (let last = 0; last < reportlist.length; last++) {
+                for (let last2 = 0; last2 < jail.length; last++) {
+                    if (reportlist[last][1] == jail[last2]) {
+                        for (let idid = 0; idid < id_list.length; idid++) {
+                            if (id_list[idid] == reportlist[last][0]) {
+                                arr[idid] += 1
+                            }
+                        }
+                    }
+                }
+            }
+            return arr
+        }
     </script>
 </body>
+
 </html>
