@@ -10,11 +10,19 @@
 
 <body>
     <script>
-        let names = [1, 2, 3, 4, 5, 6, 76, 7, 8, 8]
+       function solution(id_list, report, k) {
+        let names = [1,2,3,4,5,6,76,7,8,8]
 
-        names.forEach((item, index) => {
-            console.log(item, index)
+       
+        let data = names.map((item)=>{
+            
+            return item
         })
+        console.log(data)
+        return data
+        
+}
+document.write(solution())
     </script>
 </body>
 
