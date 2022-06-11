@@ -1,7 +1,7 @@
 // Q1. make a string out of an array
 {
   const fruits = ['apple', 'banana', 'orange'];
-  const
+
 }
 
 // Q2. make an array out of a string
