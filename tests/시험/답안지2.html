@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2 id="qu">당신의 이름은 무엇입니까?</h2>
+    <input class="z1" type="button" value="답변하기" onclick="document.getElementById('result').style.display = 'block'">
+    <input class="z2" type="button" value="질문 숨기기" onclick="document.getElementById('qu').style.display = 'none'">
+    <input calss="z3" type="button" value="질문 보이기" onclick="document.getElementById('qu').style.display = 'block'">
+    <div id="result">
+        <h2>내 이름은 김준석입니다</h2>
+    </div>
+</body>
+
+</html>
