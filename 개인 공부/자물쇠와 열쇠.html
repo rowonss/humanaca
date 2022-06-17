@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(key, lock) {
+    let mat = Array(key.length).fill(0).map(() => Array(key.length).fill(0));
+    let mat2 = Array(key.length).fill(0).map(() => Array(key.length).fill(0));
+    let mat3 = Array(key.length).fill(0).map(() => Array(key.length).fill(0));
+    let mat4 = Array(key.length).fill(0).map(() => Array(key.length).fill(0));
+
+    
+            let j = 0;
+            for (let i = key.length - 1; i >= 0; i--) {
+                for (let k = 0; k < key.length; k++) {
+                    mat[k][i] = key[j][k]
+                }
+                j++
+            }
+    
+            j = 0
+            let kk = [];
+            let kkk = [];
+            let bms = [];
+            for (let i = 0; i < 1000; i++) {
+                kkk.push(0)
+            }
+    
+        
+            for (let i = 0; i < key.length; i++) {
+                for (let j = 0; j < key.length; j++) {
+                    kkk.push(mat[i][j])
+                    kk.push(mat[i][j])
+                }
+                
+                if(i < key.length){
+                        for(let i=0; i<lock.length+(lock.length-key.length); i++){
+                            kkk.push(0)
+                        }
+                    }
+            }
+
+            for (let i = 0; i < lock.length; i++) {
+                for (let j = 0; j < lock.length; j++) {
+                    bms.push(lock[i][j])
+                }
+                if(i < lock.length){
+                        for(let i=0; i<lock.length; i++){
+                            bms.push(3)
+                        }
+            }
+            }
+                    
+            for (let i = 0; i < 1000; i++) {
+                kkk.push(0)
+            }
+
+            for (let i = 0; i<1; i++) {
+                let ssb = bms.slice()
+                for (let j = 0; j < kkk.length+100; j++) {
+                    let la = kkk.slice(j, ssb.length + j)
+                    for(let jk =0; jk<ssb.length; jk++){
+                        ssb[jk] += la[jk]
+                    }
+                
+                    let count = 0;
+                    for (let zxc = 0; zxc < ssb.length; zxc++) {
+                        if (ssb[zxc] == 1) {
+                            count += 1
+                        }
+                    }
+                    if (count === lock.length*lock.length) {
+                        return true
+                    }
+                    count = 0;
+                    ssb = bms.slice()
+                }
+            }
+    // -----------------------------------------------------------
+    for (let i = key.length - 1; i >= 0; i--) {
+                for (let k = 0; k < key.length; k++) {
+                    mat2[k][i] = mat[j][k]
+                }
+                j++
+            }
+            j = 0
+            let kk2 = [];
+            let kkk2 = [];
+            let bms2 = [];
+            for (let i = 0; i < 1000; i++) {
+                kkk2.push(0)
+            }
+    
+        
+            for (let i = 0; i < key.length; i++) {
+                for (let j = 0; j < key.length; j++) {
+                    kkk2.push(mat2[i][j])
+                    kk2.push(mat2[i][j])
+                }
+                
+                if(i < key.length){
+                        for(let i=0; i<lock.length+(lock.length-key.length); i++){
+                            kkk2.push(0)
+                        }
+                    }
+            }
+            
+
+                    
+            for (let i = 0; i < 1000; i++) {
+                kkk2.push(0)
+            }
+
+            for (let i = 0; i<1; i++) {
+                let ssb = bms.slice()
+                for (let j = 0; j < kkk2.length+4000; j++) {
+                    let la = kkk2.slice(j, ssb.length + j)
+                    for(let jk =0; jk<ssb.length; jk++){
+                        ssb[jk] += la[jk]
+                    }
+    
+                    let count = 0;
+                    for (let zxc = 0; zxc < ssb.length; zxc++) {
+                        if (ssb[zxc] == 1) {
+                            count += 1
+                        }
+                    }
+                    if (count === lock.length*lock.length) {
+                        return true
+                    }
+                    count = 0;
+                    ssb = bms.slice()
+                }
+            }
+    // -----------------------------------------------
+    for (let i = key.length - 1; i >= 0; i--) {
+                for (let k = 0; k < key.length; k++) {
+                    mat3[k][i] = mat2[j][k]
+                }
+                j++
+            }
+            j = 0
+            let kk3 = [];
+            let kkk3 = [];
+            let bms3 = [];
+            for (let i = 0; i < 1000; i++) {
+                kkk3.push(0)
+            }
+    
+        
+            for (let i = 0; i < key.length; i++) {
+                for (let j = 0; j < key.length; j++) {
+                    kkk3.push(mat3[i][j])
+                    kk3.push(mat3[i][j])
+                }
+                
+                if(i < key.length){
+                        for(let i=0; i<lock.length+(lock.length-key.length); i++){
+                            kkk3.push(0)
+                        }
+                    }
+            }
+            
+            
+                    
+            for (let i = 0; i < 1000; i++) {
+                kkk3.push(0)
+            }
+
+            for (let i = 0; i<1; i++) {
+                let ssb = bms.slice()
+                for (let j = 0; j < kkk3.length+4000; j++) {
+                    let la = kkk3.slice(j, ssb.length + j)
+                    for(let jk =0; jk<ssb.length; jk++){
+                        ssb[jk] += la[jk]
+                    }
+                    
+                    let count = 0;
+                    for (let zxc = 0; zxc < ssb.length; zxc++) {
+                        if (ssb[zxc] == 1) {
+                            count += 1
+                        }
+                    }
+                    if (count === lock.length*lock.length) {
+                        return true
+                    }
+                    count = 0;
+                    ssb = bms.slice()
+                }
+            }
+    // -------------------------------------------------------
+    for (let i = key.length - 1; i >= 0; i--) {
+                for (let k = 0; k < key.length; k++) {
+                    mat4[k][i] = mat3[j][k]
+                }
+                j++
+            }
+    
+            j = 0
+            let kk4 = [];
+            let kkk4 = [];
+            let bms4 = [];
+            for (let i = 0; i < 1000; i++) {
+                kkk4.push(0)
+            }
+    
+        
+            for (let i = 0; i < key.length; i++) {
+                for (let j = 0; j < key.length; j++) {
+                    kkk4.push(mat4[i][j])
+                    kk4.push(mat4[i][j])
+                }
+                
+                if(i < key.length){
+                        for(let i=0; i<lock.length+(lock.length-key.length); i++){
+                            kkk4.push(0)
+                        }
+                    }
+            }
+            
+            
+                    
+            for (let i = 0; i < 1000; i++) {
+                kkk4.push(0)
+            }
+
+            for (let i = 0; i<1; i++) {
+                let ssb = bms.slice()
+                for (let j = 0; j < kkk4.length+4000; j++) {
+                    let la = kkk4.slice(j, ssb.length + j)
+                    for(let jk =0; jk<ssb.length; jk++){
+                        ssb[jk] += la[jk]
+                    }
+                    
+                    let count = 0;
+                    for (let zxc = 0; zxc < ssb.length; zxc++) {
+                        if (ssb[zxc] == 1) {
+                            count += 1
+                        }
+                    }
+                    if (count === lock.length*lock.length) {
+                        return true
+                    }
+                    count = 0;
+                    ssb = bms.slice()
+                }
+                
+            }
+
+
+            return false
+        }
+    </script>
+</body>
+</html>
